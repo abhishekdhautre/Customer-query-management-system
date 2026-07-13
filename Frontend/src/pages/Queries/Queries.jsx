@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { getQueries, getMyQueries, deleteQuery, updateQuery } from '../../services/queryService.js';
 import { useAuth } from '../../context/AuthContext.jsx';
 import QueryTable from '../../components/QueryTable/QueryTable.jsx';
@@ -81,10 +82,15 @@ export default function Queries() {
   };
 
   return (
-    <div>
-      <h2 className={styles.title}>
-        {isAdmin ? 'All Customer Queries' : 'My Support Queries'}
-      </h2>
+    <div className={styles.page}>
+      <div className={styles.header}>
+        <h2 className={styles.title}>
+          {isAdmin ? 'All Customer Queries' : 'My Support Queries'}
+        </h2>
+        <Link to={isAdmin ? "/queries/create" : "/submit"} className="btn-primary">
+          {isAdmin ? "Create Query" : "Submit Query"}
+        </Link>
+      </div>
       
       <div className={styles.toolbar}>
         <SearchBar value={search} onChange={setSearch} />

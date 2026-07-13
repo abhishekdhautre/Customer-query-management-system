@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import { useAuth } from '../../context/AuthContext.jsx';
-import Aurora from '../../components/Aurora/Aurora.jsx';
 import styles from './Login.module.css';
 
 export default function Login() {
@@ -44,18 +43,11 @@ export default function Login() {
 
   return (
     <div className={styles.page}>
-      <div className={styles.aurora}>
-        <Aurora
-          colorStops={['#5227FF', '#B497CF', '#7cff67']}
-          blend={0.6}
-          amplitude={1.2}
-          speed={0.4}
-        />
-      </div>
-
-      <div className={styles.card}>
+      <div className={`card ${styles.card}`}>
         <div className={styles.brand}>
-          <span className={styles.brandDot} />
+          <div className={styles.brandLogo}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+          </div>
           QueryFlow
         </div>
 
@@ -101,13 +93,13 @@ export default function Login() {
             <input type="password" placeholder="••••••••" value={form.password} onChange={e => setForm({ ...form, password: e.target.value })} required />
           </div>
 
-          <button type="submit" disabled={loading} className={styles.btn}>
+          <button type="submit" disabled={loading} className="btn-primary" style={{ width: '100%', marginTop: '8px' }}>
             {loading ? 'Please wait…' : tab === 'register' ? 'Create account' : 'Sign in'}
           </button>
         </form>
 
         <p className={styles.footer}>
-          No account needed — <a href="/submit">submit a query directly</a>
+          No account needed — <Link to="/submit">submit a query directly</Link>
         </p>
       </div>
     </div>

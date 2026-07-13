@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext.jsx';
 import { submitQuery } from '../../services/queryService.js';
-import Aurora from '../../components/Aurora/Aurora.jsx';
 import styles from './SubmitQuery.module.css';
 
 export default function SubmitQuery() {
@@ -61,21 +60,13 @@ export default function SubmitQuery() {
   if (submitted) {
     return (
       <div className={styles.container}>
-        <div className={styles.aurora}>
-          <Aurora
-            colorStops={['#5227FF', '#B497CF', '#7cff67']}
-            blend={0.6}
-            amplitude={1.2}
-            speed={0.4}
-          />
-        </div>
-        <div className={`${styles.card} ${styles.successBox}`}>
+        <div className={`card ${styles.successBox}`}>
           <h2 className={styles.successTitle}>Query Submitted!</h2>
           <p className={styles.successText}>
             Thank you for reaching out. We have logged your request and will get back to you shortly.
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', alignItems: 'center' }}>
-            <button onClick={handleReset} className={styles.submitBtn} style={{ maxWidth: '240px' }}>
+            <button onClick={handleReset} className="btn-primary" style={{ maxWidth: '240px' }}>
               Submit Another Query
             </button>
             <Link to="/" className={styles.navLink}>
@@ -89,15 +80,7 @@ export default function SubmitQuery() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.aurora}>
-        <Aurora
-          colorStops={['#5227FF', '#B497CF', '#7cff67']}
-          blend={0.6}
-          amplitude={1.2}
-          speed={0.4}
-        />
-      </div>
-      <div className={styles.card}>
+      <div className={`card ${styles.card}`}>
         <h2 className={styles.title}>Submit a Query</h2>
         <p className={styles.description}>
           Have an issue or a question? Open a query and our team will get on it.
@@ -167,7 +150,7 @@ export default function SubmitQuery() {
             </select>
           </div>
 
-          <button type="submit" disabled={loading} className={styles.submitBtn}>
+          <button type="submit" disabled={loading} className="btn-primary" style={{ width: '100%', marginTop: '10px' }}>
             {loading ? 'Submitting query...' : 'Submit Request'}
           </button>
         </form>

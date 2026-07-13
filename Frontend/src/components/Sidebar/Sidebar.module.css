@@ -1,37 +1,78 @@
 .sidebar {
-  width: 210px;
+  width: 240px;
   flex-shrink: 0;
-  background: rgba(7, 5, 15, 0.6);
+  background-color: var(--bg-card);
   border-right: 1px solid var(--border-color);
-  padding: 16px 10px;
+  padding: 24px 16px;
   display: flex;
   flex-direction: column;
-  gap: 2px;
 }
 
-.sidebar nav {
+.brand {
   display: flex;
-  flex-direction: column;
-  gap: 2px;
+  align-items: center;
+  gap: 12px;
+  padding: 0 12px 24px;
+  margin-bottom: 8px;
 }
 
-.sidebar nav a {
-  display: block;
-  padding: 9px 14px;
-  color: var(--text-secondary);
-  font-size: 0.88rem;
-  font-weight: 500;
-  border-radius: 8px;
-  transition: var(--transition);
+.brandIcon {
+  color: var(--primary);
+  fill: var(--primary-light);
 }
 
-.sidebar nav a:hover {
+.brandText {
+  font-size: 1.125rem;
+  font-weight: 700;
   color: var(--text-primary);
-  background: rgba(255,255,255,0.04);
+  letter-spacing: -0.01em;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.bottomNav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: auto;
+  border-top: 1px solid var(--border-color);
+  padding-top: 16px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  background: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
 }
 
 .active {
-  color: var(--text-primary) !important;
-  background: rgba(124, 92, 252, 0.12) !important;
-  font-weight: 600 !important;
+  color: var(--primary) !important;
+  background-color: var(--primary-light) !important;
+  font-weight: 600;
+}
+
+.logout:hover {
+  color: var(--danger);
+  background-color: var(--danger-light);
 }

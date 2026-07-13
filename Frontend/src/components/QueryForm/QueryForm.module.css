@@ -1,89 +1,62 @@
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 16px 0;
+}
+
 .form {
-  background: var(--bg-secondary);
+  background-color: var(--bg-card);
   border: 1px solid var(--border-color);
   padding: 32px;
   border-radius: var(--radius);
-  max-width: 600px;
-  backdrop-filter: blur(20px);
-  box-shadow: var(--shadow-md);
+  width: 100%;
+  max-width: 640px;
+  box-shadow: var(--shadow-sm);
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+}
+
+.row > .group {
+  flex: 1;
 }
 
 .group {
   display: flex;
   flex-direction: column;
-  gap: 6px;
   margin-bottom: 20px;
 }
 
 .group label {
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: var(--text-secondary);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
   margin-bottom: 6px;
 }
 
-.group input, 
-.group textarea, 
-.group select {
-  width: 100%;
-  background: var(--bg-tertiary) !important;
-  border: 1px solid var(--border-color) !important;
-  border-radius: 10px !important;
-  color: var(--text-primary) !important;
-  padding: 11px 14px !important;
-  font-size: 0.93rem;
-  outline: none;
-  font-family: var(--font-family);
-  transition: border-color 0.2s, box-shadow 0.2s;
+.inputError {
+  border-color: var(--danger) !important;
 }
 
-.group select option {
-  background: #1a1530;
-  color: var(--text-primary);
+.inputError:focus {
+  box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.2) !important;
 }
 
-.group textarea {
-  resize: vertical;
-  min-height: 100px;
-}
-
-.group input:focus, 
-.group textarea:focus, 
-.group select:focus {
-  border-color: var(--border-focus) !important;
-  box-shadow: 0 0 0 3px rgba(124, 92, 252, 0.15) !important;
-}
-
-.error {
+.errorMessage {
   color: var(--danger);
-  font-size: 0.82rem;
+  font-size: 0.75rem;
   margin-top: 4px;
   font-weight: 500;
 }
 
-.submit {
-  display: inline-block;
-  padding: 12px 24px;
-  background: var(--primary);
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 0.95rem;
-  font-weight: 600;
-  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-  box-shadow: 0 4px 16px rgba(124, 92, 252, 0.3);
-}
-
-.submit:hover:not(:disabled) {
-  background: var(--primary-hover);
-  transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(124, 92, 252, 0.45);
-}
-
-.submit:disabled {
-  opacity: 0.55;
-  cursor: not-allowed;
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-color);
 }

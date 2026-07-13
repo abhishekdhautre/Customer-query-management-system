@@ -1,0 +1,111 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 12px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.header h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.editBtn {
+  padding: 8px 18px;
+  background: rgba(245, 158, 11, 0.15) !important;
+  color: #fde047 !important;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.editBtn:hover {
+  background: var(--warning) !important;
+  color: #000 !important;
+}
+
+.deleteBtn {
+  padding: 8px 18px;
+  background: rgba(239, 68, 68, 0.15) !important;
+  color: #fca5a5 !important;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.deleteBtn:hover {
+  background: var(--danger) !important;
+  color: #fff !important;
+}
+
+.card {
+  background: var(--bg-secondary);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  padding: 32px;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.detailRow {
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 12px;
+  align-items: center;
+}
+
+.detailLabel {
+  width: 140px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.detailValue {
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.descriptionBox {
+  margin-top: 12px;
+}
+
+.descriptionLabel {
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.description {
+  color: var(--text-primary);
+  line-height: 1.7;
+  background: rgba(31, 41, 55, 0.3);
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  white-space: pre-wrap;
+}

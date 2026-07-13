@@ -1,0 +1,72 @@
+{
+  "users": [
+    {
+      "_id": "user_mrhx6pwp",
+      "name": "Abhi",
+      "email": "abhi@example.com",
+      "password": "$2b$10$mLKQ5xG68ocJ/WP2S3mSKegwqF8.F6nQOsMPV6kOpUDxNz8vZBTl6",
+      "role": "customer",
+      "createdAt": "2026-07-12T14:59:59.017Z",
+      "updatedAt": "2026-07-12T14:59:59.017Z"
+    }
+  ],
+  "queries": [
+    {
+      "_id": "query_mrhx7wif",
+      "title": "Billing Query",
+      "description": "I have a query about my invoice",
+      "customerName": "Abhi",
+      "customerEmail": "abhi@example.com",
+      "status": "open",
+      "priority": "high",
+      "createdAt": "2026-07-12T15:00:54.231Z",
+      "updatedAt": "2026-07-12T15:00:54.231Z"
+    },
+    {
+      "_id": "query_mrhxjiiq",
+      "title": "Billing Query",
+      "description": "I have a query about my invoice",
+      "customerName": "Abhi",
+      "customerEmail": "abhi@example.com",
+      "status": "open",
+      "priority": "high",
+      "createdAt": "2026-07-12T15:09:55.970Z",
+      "updatedAt": "2026-07-12T15:09:55.972Z"
+    },
+    {
+      "_id": "query_mritw77k",
+      "title": "test query",
+      "description": "i want to claim warranty ",
+      "customerName": "Abhi",
+      "customerEmail": "abhi@example.com",
+      "status": "open",
+      "priority": "high",
+      "createdAt": "2026-07-13T06:15:35.552Z",
+      "updatedAt": "2026-07-13T06:16:15.634Z"
+    },
+    {
+      "_id": "query_mrixsqen",
+      "title": "Testing MongoDB Atlas Storage",
+      "description": "Let us confirm this query stores directly in MongoDB Atlas and shows in Compass.",
+      "customerName": "Atlas Tester",
+      "customerEmail": "atlas@example.com",
+      "status": "open",
+      "priority": "high",
+      "isDeleted": false,
+      "createdAt": "2026-07-13T08:04:52.271Z",
+      "updatedAt": "2026-07-13T08:04:52.271Z"
+    },
+    {
+      "_id": "query_mriy77sr",
+      "title": "account recovery ",
+      "description": "my netflix acc was haacked ",
+      "customerName": "Abhi",
+      "customerEmail": "abhi@example.com",
+      "status": "open",
+      "priority": "high",
+      "isDeleted": false,
+      "createdAt": "2026-07-13T08:16:07.995Z",
+      "updatedAt": "2026-07-13T08:16:07.995Z"
+    }
+  ]
+}

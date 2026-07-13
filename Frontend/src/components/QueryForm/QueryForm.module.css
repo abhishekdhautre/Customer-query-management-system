@@ -1,0 +1,9 @@
+.form { background: #fff; padding: 24px; border-radius: 8px; max-width: 600px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+.group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+.group label { font-size: 0.9rem; font-weight: 500; color: #444; }
+.group input, .group textarea, .group select { padding: 9px 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 0.9rem; }
+.group textarea { resize: vertical; min-height: 90px; }
+.group input:focus, .group textarea:focus, .group select:focus { outline: none; border-color: #1a73e8; }
+.error { color: #c62828; font-size: 0.8rem; }
+.submit { padding: 10px 24px; background: #1a73e8; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-size: 0.95rem; }
+.submit:hover { background: #1558b0; }

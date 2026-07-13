@@ -1,0 +1,20 @@
+.input {
+  padding: 8px 16px !important;
+  background: var(--bg-tertiary) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  width: 280px !important;
+  font-size: 0.9rem !important;
+  outline: none;
+  transition: var(--transition) !important;
+}
+
+.input:hover {
+  border-color: var(--border-hover) !important;
+}
+
+.input:focus {
+  border-color: var(--border-focus) !important;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2) !important;
+}
